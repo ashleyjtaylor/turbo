@@ -1,0 +1,17 @@
+{
+  "name": "@turboapp/math",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    "./index": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "lint": "eslint ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.1.1"
+  }
+}
