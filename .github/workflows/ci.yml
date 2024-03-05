@@ -83,4 +83,4 @@ jobs:
           commit: 'chore(release): version packages'
           createGithubReleases: false
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
