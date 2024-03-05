@@ -6,7 +6,9 @@ env:
   TURBO_TELEMETRY_DISABLED: 1
   DO_NOT_TRACK: 1
 
-permissions: write-all
+permissions:
+  contents: write
+  pull-requests: write
 
 on:
   push:
