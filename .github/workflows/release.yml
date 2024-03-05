@@ -23,8 +23,7 @@ jobs:
       - run: npm ci
       - uses: changesets/action@v1
         with:
-          version: changeset publish
-          publish: changeset version
+          version: npx changeset version
           title: 'chore(release): version packages'
           commit: 'chore(release): version packages'
           createGithubReleases: false
