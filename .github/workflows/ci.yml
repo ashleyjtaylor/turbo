@@ -3,8 +3,12 @@ name: ci
 env:
   NODE_VERSION: 20
   GITHUB_TOKEN: ${{ github.token }}
+  TURBO_TELEMETRY_DISABLED: 1
+  DO_NOT_TRACK: 1
 
-permissions: write-all
+permissions:
+  contents: write
+  pull-requests: write
 
 on:
   push:
@@ -64,3 +68,21 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm ci
       - run: npx turbo run build --filter=...[HEAD^1]
+
+  release:
+    runs-on: ubuntu-latest
+    needs: [audit, lint, test, build]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - run: npm ci
+      - uses: changesets/action@v1
+        with:
+          version: npm run changeset:version
+          title: 'chore(release): version packages'
+          commit: 'chore(release): version packages'
+          createGithubReleases: false
+        env:
+          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
