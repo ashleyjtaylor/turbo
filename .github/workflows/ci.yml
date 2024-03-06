@@ -79,5 +79,9 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm ci
       - uses: changesets/action@v1
+        with:
+          title: 'chore(release): version packages'
+          commit: 'chore(release): version packages'
+          createGithubReleases: false
         env:
           GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
