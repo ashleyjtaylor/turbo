@@ -4,5 +4,6 @@
   "version": "independent",
   "conventionalCommits": true,
   "gitTagVersion": false,
+  "push": true,
   "message": "chore(release): %v"
 }
