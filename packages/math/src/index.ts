@@ -7,3 +7,5 @@ export const divide = (num1: number, num2: number) => num1 / num2
 export const multiply = (num1: number, num2: number) => num1 * num2
 
 export const mod = (num1: number, num2: number) => num1 % num2
+
+export const gt = (num1: number, num2: number) => num1 > num2
