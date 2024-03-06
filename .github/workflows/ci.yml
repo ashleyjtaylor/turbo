@@ -80,6 +80,8 @@ jobs:
       - run: npm ci
       - uses: changesets/action@v1
         with:
-          version: 'chore(release): version packages'
+          title: 'chore(release): version packages'
+          commit: 'chore(release): version packages'
+          createGithubReleases: false
         env:
           GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
