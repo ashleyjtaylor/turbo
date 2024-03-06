@@ -78,6 +78,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm ci
-      - run: npx semantic-release
+      - run: npx beachball check
+      - run: npx beachball bump
         env:
           GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
