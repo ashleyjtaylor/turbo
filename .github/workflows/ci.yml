@@ -79,5 +79,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm ci
       - uses: changesets/action@v1
+        with:
+          version: 'chore(release): version packages'
         env:
           GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
