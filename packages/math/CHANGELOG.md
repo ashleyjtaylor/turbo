@@ -1,5 +1,11 @@
 # @turboapp/math
 
+## 1.0.4
+
+### Patch Changes
+
+- e68a36d: add gt fn
+
 ## 1.0.3
 
 ### Patch Changes

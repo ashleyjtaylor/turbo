@@ -1,5 +1,13 @@
 # @turboapp/web
 
+## 1.0.3
+
+### Patch Changes
+
+- e68a36d: add gt fn
+- Updated dependencies [e68a36d]
+  - @turboapp/math@1.0.4
+
 ## 1.0.2
 
 ### Patch Changes
