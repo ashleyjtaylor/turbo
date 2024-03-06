@@ -4,7 +4,7 @@
   "private": true,
   "description": "",
   "exports": {
-    "./index": "./src/index.ts"
+    ".": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc -p .",

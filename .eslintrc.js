@@ -1,5 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
+  $schema: 'https://json.schemastore.org/eslintrc',
   env: {
     node: true,
     browser: true,
