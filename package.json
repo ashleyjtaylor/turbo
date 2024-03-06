@@ -8,16 +8,13 @@
     "test": "turbo test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "rm -rf node_modules **/*/dist **/*/node_modules **/*.turbo **/*.next",
-    "prepare": "husky",
-    "release": "semantic-release"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
-    "@semantic-release/changelog": "^6.0.3",
     "husky": "^9.0.11",
     "prettier": "^3.1.1",
-    "semantic-release": "^23.0.2",
     "turbo": "latest"
   },
   "engines": {
