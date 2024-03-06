@@ -78,11 +78,6 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm ci
-      - uses: changesets/action@v1
-        with:
-          version: npm run changeset:version
-          title: 'chore(release): version packages'
-          commit: 'chore(release): version packages'
-          createGithubReleases: false
+      - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
