@@ -9,12 +9,14 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "rm -rf node_modules **/*/dist **/*/node_modules **/*.turbo **/*.next",
     "prepare": "husky",
-    "changeset": "changeset add"
+    "version": "lerna version --sync-workspace-lock --yes"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
+    "@lerna-lite/cli": "^3.3.1",
+    "@lerna-lite/version": "^3.3.1",
     "husky": "^9.0.11",
     "prettier": "^3.1.1",
     "turbo": "latest"

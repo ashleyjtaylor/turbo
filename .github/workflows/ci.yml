@@ -72,17 +72,13 @@ jobs:
   release:
     runs-on: ubuntu-latest
     needs: [audit, lint, test, build]
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm ci
-      - uses: changesets/action@v1
-        with:
-          title: 'ci: release'
-          commit: 'ci: release'
-          createGithubReleases: false
+      - run: npm run version
         env:
           GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
