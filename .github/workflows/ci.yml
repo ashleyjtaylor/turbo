@@ -80,7 +80,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - name: version
-        run: |
-          npm ci
-          npm run version
+      - run: npm ci
+      - run: npm run version
