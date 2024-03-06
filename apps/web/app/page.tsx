@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import { add, subtract, divide, mod } from '@turboapp/math/index'
+import { add, subtract, divide, mod } from '@turboapp/math'
 
 export default function Page(): JSX.Element {
   return (
