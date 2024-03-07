@@ -3,5 +3,6 @@
   "useWorkspaces": true,
   "version": "independent",
   "conventionalCommits": true,
-  "noPush": true
+  "noPush": true,
+  "noGitTagVersion": true
 }
