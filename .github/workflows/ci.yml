@@ -15,10 +15,11 @@ on:
     branches:
       - main
     paths-ignore:
-      - '**/*.md'
+      - "**/*.md"
   pull_request:
+    types: [opened, synchronize]
     paths-ignore:
-      - '**/*.md'
+      - "**/*.md"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -68,21 +69,3 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm ci
       - run: npx turbo run build --filter=...[HEAD^1]
-
-  release:
-    runs-on: ubuntu-latest
-    needs: [audit, lint, test, build]
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: ${{ github.ref_name }}
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-      - run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          npm ci
-          npm run version
