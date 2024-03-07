@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/ashleyjtaylor/turbo/compare/@turboapp/math@1.0.5...@turboapp/math@1.0.6) (2024-03-07)
+
+**Note:** Version bump only for package @turboapp/math
+
 ## 1.0.5 (2024-03-06)
 
 ### Bug Fixes
