@@ -4,5 +4,6 @@
   "version": "independent",
   "conventionalCommits": true,
   "noPush": true,
-  "noGitTagVersion": true
+  "noGitTagVersion": true,
+  "message": "ci: release"
 }
