@@ -4,9 +4,7 @@ env:
   NODE_VERSION: 20
   GITHUB_TOKEN: ${{ github.token }}
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: write-all
 
 on:
   pull_request:
