@@ -3,6 +3,7 @@
   "useWorkspaces": true,
   "version": "independent",
   "conventionalCommits": true,
-  "push": true,
-  "message": "chore(release): %v"
+  "noPush": true,
+  "noGitTagVersion": true,
+  "message": "ci: release"
 }
