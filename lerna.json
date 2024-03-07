@@ -5,5 +5,5 @@
   "conventionalCommits": true,
   "noPush": true,
   "noGitTagVersion": true,
-  "message": "ci: release"
+  "message": "ci(release): version"
 }
