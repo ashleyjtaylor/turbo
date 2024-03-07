@@ -2,9 +2,6 @@ name: version
 
 env:
   NODE_VERSION: 20
-  GITHUB_TOKEN: ${{ github.token }}
-
-permissions: write-all
 
 on:
   pull_request:
@@ -41,3 +38,5 @@ jobs:
         run: |
           npm ci
           npm run version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_ACTIONS_TOKEN }}
